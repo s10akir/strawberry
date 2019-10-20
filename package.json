@@ -1,0 +1,37 @@
+{
+  "name": "strawberry",
+  "version": "0.1.0",
+  "description": "gpioセンサでロギングするやつ",
+  "main": "dist/app.js",
+  "repository": "https://github.com/s10akir/strawberry",
+  "author": "Akira Shinohara",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "lint": "eslint ./src/*",
+    "fix": "eslint --fix ./src/*",
+    "start": "node ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run fix"
+    }
+  }
+}

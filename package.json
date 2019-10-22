@@ -29,7 +29,8 @@
     "build": "npm-run-all clean tsc",
     "lint": "eslint ./src/**/*.ts",
     "fix": "eslint --fix ./src/**/*.ts",
-    "start": "node ."
+    "start": "node .",
+    "debug": "DEBUG=* node ."
   },
   "husky": {
     "hooks": {
